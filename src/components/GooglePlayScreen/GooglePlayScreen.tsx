@@ -18,7 +18,7 @@ export const GooglePlayScreen = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:2000/projects/get-project")
+      .get("https://portfolio-d3gj33sv9-nehalgamal093.vercel.app/projects/get-project")
       .then((response) => {
         console.log(response);
         getData(response.data);

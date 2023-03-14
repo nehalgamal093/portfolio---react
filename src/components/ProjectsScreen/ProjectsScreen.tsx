@@ -22,7 +22,7 @@ export const ProjectsScreen = () => {
   const { type } = useParams();
   useEffect(() => {
     axios
-      .get("http://localhost:2000/projects/get-project")
+      .get("https://portfolio-d3gj33sv9-nehalgamal093.vercel.app/projects/get-project")
       .then((response) => {
         console.log("Response data", response.data);
         const val = response.data.filter((item: resultProps) => {

@@ -20,7 +20,7 @@ export const MainPage = () => {
   useEffect(() => {
     AOS.init({ duration: 2000 });
     axios
-      .get("http://localhost:2000/projects/get-download")
+      .get("https://portfolio-d3gj33sv9-nehalgamal093.vercel.app/projects/get-download")
       .then((response) => {
         getData(response.data);
       })

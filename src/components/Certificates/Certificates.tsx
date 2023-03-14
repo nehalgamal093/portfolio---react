@@ -19,7 +19,7 @@ export const Certificates = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:2000/projects/get-cert")
+      .get("https://portfolio-d3gj33sv9-nehalgamal093.vercel.app/projects/get-cert")
       .then((response) => {
    
         getData(response.data);
