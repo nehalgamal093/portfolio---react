@@ -1,0 +1,36 @@
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  margin: auto;
+  padding: 20px;
+}
+.nav-container .logo a {
+  font-family: "Audiowide", cursive;
+  font-size: 1.5em;
+  letter-spacing: 0.3rem;
+  color: white;
+  text-decoration: none;
+}
+nav.nav-list .nav-style {
+  text-decoration: none;
+  padding-right: 30px;
+  color: white;
+  font-family: "Audiowide", cursive;
+}
+nav.nav-list .nav-style.active {
+  font-weight: bold;
+}
+
+@media (max-width: 950px) {
+  .nav-container .logo {
+    font-size: 1em;
+    letter-spacing: 0.3rem;
+  }
+  nav.nav-list .nav-style {
+    text-decoration: none;
+    font-size: 10px;
+    padding-right: 20px;
+  }
+}

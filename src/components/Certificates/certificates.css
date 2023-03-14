@@ -1,0 +1,17 @@
+.cert-container {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+img.certs {
+  height: 450px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 950px) {
+  img.certs {
+    height: 250px;
+  }
+}

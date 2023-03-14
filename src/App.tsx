@@ -1,25 +1,55 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+
+import { MainPage } from "./components/MainPage/MainPage";
+import { Navbar } from "./components/Navbar/Navbar";
+import { Routes, Route, BrowserRouter as Router } from "react-router-dom";
+import { SkillsScreen } from "./components/Skills/SkillsScreen";
+import { ProjectsScreen } from "./components/ProjectsScreen/ProjectsScreen";
+import { ProjectDetails } from "./components/ProjectDetails/ProjectDetails";
+import { Design } from "./components/Design/Design";
+import { GooglePlayScreen } from "./components/GooglePlayScreen/GooglePlayScreen";
+import { Certificates } from "./components/Certificates/Certificates";
+import { Contact } from "./components/Contact/Contact";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <Router>
+      <div
+        style={{
+          position: "absolute",
+          top: 0,
+          left: 0,
+          width: "100%",
+          height: "100%",
+        }}
+      >
+        <Design />
+        <div
+          style={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+          }}
         >
-          Learn React
-        </a>
-      </header>
-    </div>
+          <Navbar />
+
+          <Routes>
+            <Route path="/" element={<MainPage />} />
+            <Route path="/projects" element={<SkillsScreen />} />
+            <Route path="/projects/:type" element={<ProjectsScreen />} />
+            {/* <Route path="/projects" element={<ProjectsScreen />} /> */}
+            <Route path="/project-details" element={<ProjectDetails />} />
+
+            <Route path="/google-play" element={<GooglePlayScreen />} />
+            <Route path="/certificates" element={<Certificates />} />
+            <Route path="/contact-me" element={<Contact />} />
+          </Routes>
+          {/* You can render <Route> and <NavTabs /> here */}
+        </div>
+      </div>
+    </Router>
   );
 }
 
