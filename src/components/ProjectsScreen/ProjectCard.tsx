@@ -14,7 +14,7 @@ export const ProjectCard = ({
   tags,
 }: resultProps) => {
   
-    console.log(`NAaaaaaame ${name}`)
+
   const navigate = useNavigate();
   return (
     <motion.div
@@ -23,10 +23,7 @@ export const ProjectCard = ({
     animate={{ y: -10 }} transition={{ duration: 1 }}
       className="projects-card"
       key={_id}
-      style={{
-        width: type === "flutter" ? "20%" : "40%",
-        height: type === "flutter" ? "70%" : "50%",
-      }}
+     
 
       onClick={() =>
         navigate("/project-details", {
@@ -43,7 +40,10 @@ export const ProjectCard = ({
       }
     >
       <div className="con-container">
-        <img src={mainImg} width="200px" height="400px" alt="main" />
+        <img src={mainImg}  alt="main" style={{
+        width: type === "flutter" ? "15vw" : "30vw",
+        height: type === "flutter" ? "30vw" : "20vw",
+      }} />
         <h4>{name}</h4>
       </div>
     </motion.div>

@@ -1,5 +1,5 @@
 import React from "react";
-import { Outlet, useNavigate} from "react-router-dom";
+import { useNavigate} from "react-router-dom";
 import { motion } from "framer-motion";
 
 import "./skills-screen.css";
@@ -12,16 +12,14 @@ export const SkillsScreen = () => {
         whileHover={{ scale: 1.1 }}
         onClick={() => navigate("flutter")}
       >
-        <div className="circle-container">
-          <span>
+       
             <img
               alt="flutter"
               src={require("../images/flutter.png")}
               width="50px"
               height="50px"
             />
-          </span>
-        </div>
+       
         <p>Flutter</p>
       </motion.div>
       <motion.div

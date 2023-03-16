@@ -5,13 +5,13 @@ import { loadFull } from "tsparticles";
 import type { Container, Engine } from "tsparticles-engine";
 export const Design = () => {
   const particlesInit = useCallback(async (engine: Engine) => {
-    // console.log(engine);
+   
 
     await loadFull(engine);
   }, []);
 
   const particlesLoaded = useCallback(async (container?: Container) => {
-    // await console.log(container);
+   
   }, []);
   return (
     <Particles

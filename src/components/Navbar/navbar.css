@@ -2,20 +2,20 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 80%;
+  width: 80vw;
   margin: auto;
-  padding: 20px;
+  padding: 1.5vw;
 }
 .nav-container .logo a {
   font-family: "Audiowide", cursive;
-  font-size: 1.5em;
-  letter-spacing: 0.3rem;
+  font-size: 1.5vw;
+  letter-spacing: 0.3vw;
   color: white;
   text-decoration: none;
 }
 nav.nav-list .nav-style {
   text-decoration: none;
-  padding-right: 30px;
+  padding-right: 2vw;
   color: white;
   font-family: "Audiowide", cursive;
 }
@@ -23,14 +23,20 @@ nav.nav-list .nav-style.active {
   font-weight: bold;
 }
 
-@media (max-width: 950px) {
-  .nav-container .logo {
-    font-size: 1em;
-    letter-spacing: 0.3rem;
+@media (max-width: 650px) {
+  
+  .nav-container {
+   width: 100vw;
+    flex-direction: column;
+      padding: 20px 0;
+
   }
-  nav.nav-list .nav-style {
-    text-decoration: none;
+  .nav-container .logo a {
+
+    font-size: 20px;
+   
+  }
+  nav.nav-list .nav-style{
     font-size: 10px;
-    padding-right: 20px;
   }
 }

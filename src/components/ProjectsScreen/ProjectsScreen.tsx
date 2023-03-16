@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./projectsscreens.css";
 import { CircularProgress } from "@mui/material";
-import "aos/dist/aos.css";
+
 import axios from "axios";
 import { useParams ,Outlet} from "react-router-dom";
 import { ProjectCard } from "./ProjectCard";
@@ -24,17 +24,17 @@ export const ProjectsScreen = () => {
     axios
       .get("https://portfolio-d3gj33sv9-nehalgamal093.vercel.app/projects/get-project")
       .then((response) => {
-        console.log("Response data", response.data);
+
         const val = response.data.filter((item: resultProps) => {
-          console.log('flutter or react ',item.type, type);
+
 
           return item.type === type;
         });
         getData(val as resultProps[]);
-        console.log(val);
+   
       })
       .catch((error) => {
-        console.log(error);
+
       });
   }, [type]);
 

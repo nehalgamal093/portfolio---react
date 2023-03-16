@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "aos/dist/aos.css";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-
+import { motion } from "framer-motion";
 type resultProps = {
   name: string;
   images: [];
@@ -20,11 +20,11 @@ export const GooglePlayScreen = () => {
     axios
       .get("https://portfolio-d3gj33sv9-nehalgamal093.vercel.app/projects/get-project")
       .then((response) => {
-        console.log(response);
+       
         getData(response.data);
       })
       .catch((error) => {
-        console.log(error);
+
       });
   }, []);
   const navigate = useNavigate();
@@ -33,8 +33,10 @@ export const GooglePlayScreen = () => {
       {data.length ? (
         data.map((project) =>
           project.gitLink === "" ? (
-            <div
+            <motion.div
               className="projects-card"
+              whileHover={{ scale: 1.1 }}
+              animate={{ y: -10 }} transition={{ duration: 1 }}
               onClick={() =>
                 navigate("/project-details", {
                   state: {
@@ -58,7 +60,7 @@ export const GooglePlayScreen = () => {
                 />
                 <h4>{project.name}</h4>
               </div>
-            </div>
+            </motion.div>
           ) : (
             <div></div>
           )

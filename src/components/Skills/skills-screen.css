@@ -1,95 +1,40 @@
-.skills-container {
+.skills-container{
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
   height: 100vh;
 }
 
-.card-container {
-  width: 20%;
-  height: 30%;
+.card-container{
+  width:30vh;
   background: rgba(8, 8, 8, 0.288);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-radius: 2%;
-  box-shadow: rgba(218, 208, 208, 0.16) 0px 1px 4px;
-  margin-right: 2rem;
-  cursor: pointer;
+  margin-right: 2vw;
+  padding: 5vh;
+}
+p{
+  font-size: 1.5vw;
+  font-family:  'Audiowide', cursive;
+  letter-spacing: 1.2;
+  color:white;
+text-align: center;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  white-space: normal;
+  width:70vw;
+
 }
 
-.circle-container {
-  box-shadow: rgba(235, 221, 221, 0.16) 0px 1px 4px;
-  width: 30%;
-  height: 40%;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.circle-container span {
-  z-index: 2;
-  color: white;
-}
-.card-container p {
-  font-size: 20px;
-
-  color: white;
-  font-family: "Audiowide", cursive;
-}
-
-@media (max-width: 950px) {
-  .card-container {
-    width: 35%;
-    height: 35%;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-radius: 2%;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-    margin-right: 2rem;
-    cursor: pointer;
-  }
-  .circle-container {
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-    width: 40%;
-    height: 35%;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-}
-@media (max-width: 499px) {
-  .skills-container {
-    
+@media (max-width:650px){
+  .skills-container{
     flex-wrap: wrap;
   }
-}
-@media (max-width: 327px) {
-  .skills-container {
-    
-    flex-wrap: wrap;
-  }
-  .card-container {
-    width: 20%;
-    height: 20%;
-    background:none;
-    box-shadow: none;
-  }
-  .circle-container {
-    box-shadow:none;
-  
-  }
-  .card-container p {
-    font-size: 13px;
-  
-    color: white;
-    font-family: "Audiowide", cursive;
+  p{
+    font-size: 10px;
+   
   }
 }

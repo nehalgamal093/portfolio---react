@@ -3,16 +3,21 @@ import { useLocation } from "react-router-dom";
 import "./projectdetails.css";
 import { Chip, Stack } from "@mui/material";
 import { motion } from "framer-motion";
+
 export const ProjectDetails = () => {
   const location = useLocation();
-  console.log(location.state.type);
+ 
   return (
     <div className="project-screen-container">
       <div className="details-container">
         <motion.h1 animate={{ y: -10 }} transition={{ duration: 1 }}>
           {location.state.name}
         </motion.h1>
-        <motion.p animate={{ y: -10 }} transition={{ duration: 1 }}>
+        <motion.p
+          animate={{ y: -10 }}
+          transition={{ duration: 1 }}
+          className="project-desc"
+        >
           {location.state.desc}
         </motion.p>
         <Stack
@@ -21,13 +26,14 @@ export const ProjectDetails = () => {
           transition={{ duration: 2 }}
           spacing={1}
           direction="row"
+          style={{width:'50vw',display:'flex',justifyContent:'center',alignItems:'center',flexWrap:'wrap'}}
         >
           {location.state.tags.length ? (
             location.state.tags.map((tag: string) => (
               <Chip
                 label={tag}
                 variant="filled"
-                style={{ color: "white", background: "rgba(8, 8, 8, 0.288)" }}
+                style={{ color: "white", background: "rgba(8, 8, 8, 0.288)" ,margin:'1vw'}}
               />
             ))
           ) : (
@@ -65,11 +71,10 @@ export const ProjectDetails = () => {
               alt="location.name"
               src={img}
               style={{
-                width: location.state.type === "flutter" ? "10%" : "50%",
-                height: location.state.type === "flutter" ? "40%" : "10%",
+                width: location.state.type === "flutter" ? "13vw" : "40vw",
+                height: location.state.type === "flutter" ? "30vw" : "20vw",
               }}
             />
-   
           ))
         ) : (
           <div></div>
