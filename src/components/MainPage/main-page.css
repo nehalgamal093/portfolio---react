@@ -1,46 +1,41 @@
-.main-page{
+.main-page {
   display: flex;
   flex-direction: row;
-height: 100vh;
-
+  height: 100vh;
 }
-.icon-main{
-  width:10%;
+.icon-main {
+  width: 10%;
   display: flex;
   flex-direction: column;
   align-items: start;
   justify-content: center;
-
-
 }
-.icon-main a{
-  color:white
-}
-.description-main{
-  width:60%;
-  display: flex;
-  flex-direction: column;
-height: 90vh;
-  align-items: center;
- padding: 0 50px;
-justify-content: center;
+.icon-main a {
   color: white;
 }
-.description-main p.name{
-  font-size: 2vw;
-  font-family: 'Audiowide', cursive;
-  margin: 0;
-  
+.description-main {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  height: 90vh;
+  align-items: center;
+  padding: 0 50px;
+  justify-content: center;
+  color: white;
 }
-.description-main p.title{
+.description-main p.name {
+  font-size: 2vw;
+  font-family: "Audiowide", cursive;
+  margin: 0;
+}
+.description-main p.title {
   font-size: 1.7vw;
-  font-family: 'Montserrat', sans-serif;
-  
+  font-family: "Montserrat", sans-serif;
 }
 
-.description-main p.my-desc{
+.description-main p.my-desc {
   font-size: 1.3vw;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   line-height: 1.5vw;
   text-align: center;
   letter-spacing: 1.2;
@@ -48,101 +43,86 @@ justify-content: center;
   -webkit-line-clamp: 10;
   -webkit-box-orient: vertical;
   white-space: normal;
-  width:40vw;
-
+  width: 40vw;
 }
-.cv-container{
-  color:white;
+.cv-container {
+  color: white;
   text-decoration: none;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   margin-top: 10px;
-  
 }
-.cv-container:hover{
+.cv-container:hover {
   font-weight: bold;
 }
-.skil-container{
+.skil-container {
   margin-top: 70px;
 }
 
-ul.skills-list{
+ul.skills-list {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-
-gap:2%;
+  gap: 2%;
 }
-ul.skills-list li{
+ul.skills-list li {
   list-style: none;
 }
- ul.skills-list li img {
-width:4.2vw;
-
+ul.skills-list li img {
+  width: 4.2vw;
 }
-.image-main{
-  width:40%;
-  background-image: url('../images/portfolio.png');
+.image-main {
+  width: 40%;
+  background-image: url("../images/portfolio.png");
   background-size: contain;
   background-repeat: no-repeat;
 
-background-position: center top;
-margin: 20px;
-
-
+  background-position: center top;
+  margin: 20px;
 }
 
-
-@media (max-width:650px){
-.main-page{
-  display: flex;
-height: 100vh;
-  flex-direction: column;
-
-}
-.image-main{
-height: 80vh;
-width: 30vw;
-position:absolute;
-right:18%;
-top:30%
-}
-.description-main{
-  width:80%;
- 
- 
-}
-.description-main p.name{
-  font-size: 20px;
-  font-family: 'Audiowide', cursive;
-  margin: 0;
-  
-}
-.description-main p.title{
-  font-size: 15px;
-  font-family: 'Montserrat', sans-serif;
-  
-}
-
-.description-main p.my-desc{
-  font-size: 12px;
-  font-family: 'Montserrat', sans-serif;
-  line-height:1.2;
-  text-align: center;
-  letter-spacing: 1.2;
-  display: -webkit-box !important;
-  -webkit-line-clamp: 10;
-  -webkit-box-orient: vertical;
-  white-space: normal;
-  width:300px;
-
-}
-ul.skills-list li img {
-  width:20px;
-  
+@media (max-width: 650px) {
+  .main-page {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
   }
-  ul.skills-list{
-   margin-right: 50px;
+  .image-main {
+    height: 70vh;
+    width: 30vw;
+    position: absolute;
+    right: 25%;
+    top: 20%;
   }
- 
+  .description-main {
+    width: 80%;
+  }
+  .description-main p.name {
+    font-size: 20px;
+    font-family: "Audiowide", cursive;
+    margin: 0;
+  }
+  .description-main p.title {
+    font-size: 15px;
+    font-family: "Montserrat", sans-serif;
+  }
+
+  .description-main p.my-desc {
+    font-size: 12px;
+    font-family: "Montserrat", sans-serif;
+    line-height: 1.2;
+    text-align: center;
+    letter-spacing: 1.2;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 10;
+    -webkit-box-orient: vertical;
+    white-space: normal;
+    width: 300px;
+  }
+  ul.skills-list li img {
+    width: 20px;
+  }
+  ul.skills-list {
+    margin-right: 50px;
+  }
 }
