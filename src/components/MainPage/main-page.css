@@ -1,145 +1,20 @@
-/* .main-page {
-  display: flex;
-  flex-direction: row;
-  height: 100vh;
-}
-.icon-main {
-  width: 10%;
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  justify-content: center;
-}
-.icon-main a {
-  color: white;
-}
-.description-main {
-  width: 60%;
-  display: flex;
-  flex-direction: column;
-  height: 90vh;
-  align-items: center;
-  padding: 0 50px;
-  justify-content: center;
-  color: white;
-}
-.description-main p.name {
-  font-size: 2vw;
-  font-family: "Audiowide", cursive;
-  margin: 0;
-}
-.description-main p.title {
-  font-size: 1.7vw;
-  font-family: "Montserrat", sans-serif;
-}
-
-.description-main p.my-desc {
-  font-size: 1.3vw;
-  font-family: "Montserrat", sans-serif;
-  line-height: 1.5vw;
-  text-align: center;
-  letter-spacing: 1.2;
-  display: -webkit-box !important;
-  -webkit-line-clamp: 10;
-  -webkit-box-orient: vertical;
-  white-space: normal;
-  width: 40vw;
-}
-.cv-container {
-  color: white;
-  text-decoration: none;
-  font-family: "Montserrat", sans-serif;
-  margin-top: 10px;
-}
-.cv-container:hover {
-  font-weight: bold;
-}
-.skil-container {
-  margin-top: 70px;
-}
-
-ul.skills-list {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 2%;
-}
-ul.skills-list li {
-  list-style: none;
-}
-ul.skills-list li img {
-  width: 4.2vw;
-}
-.image-main {
-  width: 40%;
-  background-image: url("../images/portfolio.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-
-  background-position: center top;
-  margin: 20px;
-} */
-
-/* @media (max-width: 650px) {
-  .main-page {
-    display: flex;
-    height: 100vh;
-    flex-direction: column;
-  }
-  .image-main {
-    height: 70vh;
-    width: 30vw;
-    position: absolute;
-    right: 25%;
-    top: 20%;
-  }
-  .description-main {
-    width: 80%;
-  }
-  .description-main p.name {
-    font-size: 20px;
-    font-family: "Audiowide", cursive;
-    margin: 0;
-  }
-  .description-main p.title {
-    font-size: 15px;
-    font-family: "Montserrat", sans-serif;
-  }
-
-  .description-main p.my-desc {
-    font-size: 12px;
-    font-family: "Montserrat", sans-serif;
-    line-height: 1.2;
-    text-align: center;
-    letter-spacing: 1.2;
-    display: -webkit-box !important;
-    -webkit-line-clamp: 10;
-    -webkit-box-orient: vertical;
-    white-space: normal;
-    width: 300px;
-  }
-  ul.skills-list li img {
-    width: 20px;
-  }
-  ul.skills-list {
-    margin-right: 50px;
-  }
-} */
 
 .main-container {
   display: flex;
   height: 70vh;
 
+justify-content: center;
   direction: rtl;
   flex-direction: row;
 }
+
 .image-main {
-  width: 30%;
+  width: 20%;
   background-image: url("../images/portfolio.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center top;
+
 }
 .content-main {
   justify-content: space-evenly;
@@ -151,22 +26,23 @@ ul.skills-list li img {
 
 .content-main .description-main {
   margin: 20px;
-  width: 50%;
+  width: 70%;
+
 }
 .content-main .description-main p.name {
-  font-size: 2.5vw;
-
-  text-align: end;
+  font-size: 30px;
   width: 100%;
+  text-align: end;
+
 }
 .content-main .description-main p.title {
-  font-size: 1.4vw;
+  font-size: 20px;
 
   text-align: end;
   width: 100%;
 }
 .content-main .description-main p.my-desc {
-  font-size: 1vw;
+  font-size: 14px;
   width: 100%;
   line-height: 1.2;
 
@@ -177,6 +53,12 @@ ul.skills-list li img {
   white-space: normal;
   text-align: end;
 }
+.download-btn{
+padding: 10px 20px;
+border-radius: 20px;
+  background-color: black;
+margin: 0 auto;
+}
 
 .skill-container {
   display: flex;
@@ -186,21 +68,73 @@ ul.skills-list li img {
   width: 20px;
   margin: 20px;
 }
-@media (max-width: 650px) {
+@media (max-width: 480px) {
   .main-container {
     display: flex;
-    height: 70vh;
+    height: 80vh;
     flex-direction: column;
+    
+    padding-top: 20px;
   }
   .image-main {
-    height: 20%;
+    height: 30%;
     justify-content: center;
+
     width: 100%;
+    margin: 0 auto;
   }
   .content-main {
     width: 100%;
     height: 70%;
+    justify-content: space-evenly;
 
+    align-items: center;
+  }
+  .content-main .description-main {
+    margin:5px;
+    width: 50%;
+  }
+  .content-main .description-main p.name {
+    font-size: 20px;
+
+    width: 100%;
+  }
+  .content-main .description-main p.title {
+    font-size: 14px;
+  
+
+  }
+  .content-main .description-main p.my-desc {
+    font-size: 10px;
+    
+  }
+  .skill-container img {
+    width: 20px;
+    margin: 5px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .main-container {
+    display: flex;
+    height: 80vh;
+    flex-direction: column;
+    
+    padding-top: 20px;
+  }
+  .image-main {
+    height: 30%;
+    justify-content: center;
+
+    width: 100%;
+    margin: 0 auto;
+  }
+  .content-main {
+    width: 100%;
+    height: 70%;
+    justify-content: space-evenly;
+
+    align-items: center;
   }
   .content-main .description-main {
     margin:5px;
@@ -225,3 +159,119 @@ ul.skills-list li img {
     margin: 5px;
   }
 }
+   /* Media Query for Tablets Ipads portrait mode */
+   @media (min-width: 768px) and (max-width: 1024px){
+    .main-container {
+      display: flex;
+      height: 80vh;
+      flex-direction: column;
+      
+      padding-top: 20px;
+    }
+    .image-main {
+      height: 30%;
+      justify-content: center;
+  
+      width: 100%;
+      margin: 0 auto;
+    }
+    .content-main {
+      width: 100%;
+      height: 70%;
+      justify-content: space-evenly;
+  
+      align-items: center;
+    }
+    .content-main .description-main {
+      margin:5px;
+      width: 50%;
+    }
+    .content-main .description-main p.name {
+      font-size: 30px;
+  
+      width: 100%;
+    }
+    .content-main .description-main p.title {
+      font-size: 20px;
+    
+  
+    }
+    .content-main .description-main p.my-desc {
+      font-size: 14px;
+      
+    }
+    .skill-container img {
+      width: 20px;
+      margin: 5px;
+    }
+}
+  
+/* Media Query for Laptops and Desktops */
+@media (min-width: 1025px) and (max-width: 1300px){
+  .main-container {
+    display: flex;
+    height: 80vh;
+    flex-direction: column;
+    
+    padding-top: 20px;
+  }
+  .image-main {
+    height: 30%;
+    justify-content: center;
+
+    width: 100%;
+    margin: 0 auto;
+  }
+  .content-main {
+    width: 100%;
+    height: 70%;
+    justify-content: space-evenly;
+
+    align-items: center;
+  }
+  .content-main .description-main {
+    margin:5px;
+    width: 50%;
+  }
+  .content-main .description-main p.name {
+    font-size: 30px;
+
+    width: 100%;
+  }
+  .content-main .description-main p.title {
+    font-size: 20px;
+  
+
+  }
+  .content-main .description-main p.my-desc {
+    font-size: 14px;
+    
+  }
+  .skill-container img {
+    width: 20px;
+    margin: 5px;
+  }
+}
+
+   /* Media Query for Large screens */
+   @media (min-width: 1281px) {
+    .content-main .description-main p.name {
+      font-size: 30px;
+  
+      width: 100%;
+    }
+    .content-main .description-main p.title {
+      font-size: 20px;
+    
+  
+    }
+    .content-main .description-main p.my-desc {
+      font-size: 14px;
+      
+    }
+    .skill-container img {
+      width: 40px;
+      margin: 5px;
+    }
+}
+  

@@ -135,6 +135,24 @@ export const MainPage = () => {
           </p>
         </div>
         {/**End Description */}
+        {/**Start download */}
+            {data.length ? (
+          data.map((downloadLink) => (
+         <div className='download-btn'>
+             <a href={downloadLink.download} className="cv-container" style={{textDecoration:'none',color:'white'}}>
+              <span>
+                Download CV
+                <DownloadIcon
+                  style={{ color: "white", verticalAlign: "middle" }}
+                />
+              </span>
+            </a>
+         </div>
+          ))
+        ) : (
+          <div></div>
+        )}
+         {/**End download */}
         {/**Start Icons */}
         <div className="icons-main">
           <a
