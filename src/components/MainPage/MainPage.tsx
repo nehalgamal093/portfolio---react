@@ -26,91 +26,161 @@ export const MainPage = () => {
       .catch((error) => {});
   }, []);
   return (
-    <div className="main-page">
-      <div className="icon-main">
-        <a
-          href="https://www.linkedin.com/in/nehal-gamal-8b9317262/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <LinkedInIcon fontSize="large" />
-        </a>
+    // <div className="main-page">
 
-        <a
-          href="https://github.com/nehalgamal093"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <GitHubIcon fontSize="large" />
-        </a>
+    //   <motion.div className="description-main"
+    //     animate={{ y:50}}
+    //     transition={{ duration: 5 }}
+    //   >
+    //     <p className="name">My name is Nehal</p>
+    //     <p className="title">Front-End / Flutter Developer</p>
+    //     <p className="my-desc">
+    //       I am Enthusiatic, Self-Motivated & Hard-Working Front-End & Mobile
+    //       Application Developer, I am always energetic and eager to learn new
+    //       skills, Check My Current Projects To Know More about My Skills and
+    //       Contact me Directly
+    //     </p>
+    //     <div className="icon-main">
+    //     <a
+    //       href="https://www.linkedin.com/in/nehal-gamal-8b9317262/"
+    //       target="_blank"
+    //       rel="noreferrer"
+    //     >
+    //       <LinkedInIcon fontSize="large" />
+    //     </a>
 
-        <a href="mailto:nehalgamal093@gmail.com">
-          <AlternateEmailIcon fontSize="large" />
-        </a>
-      </div>
-      <motion.div className="description-main"
-        animate={{ y:50}}
-        transition={{ duration: 5 }}
-      >
-        <p className="name">My name is Nehal</p>
-        <p className="title">Front-End / Flutter Developer</p>
-        <p className="my-desc">
-          I am Enthusiatic, Self-Motivated & Hard-Working Front-End & Mobile
-          Application Developer, I am always energetic and eager to learn new
-          skills, Check My Current Projects To Know More about My Skills and
-          Contact me Directly
-        </p>
-        {data.length ? (
-          data.map((downloadLink) => (
-            <a href={downloadLink.download} className="cv-container">
-              <span>
-                Download CV
-                <DownloadIcon
-                  style={{ color: "white", verticalAlign: "middle" }}
-                />
-              </span>
-            </a>
-          ))
-        ) : (
-          <div></div>
-        )}
-        <div className="skil-container">
-          <ul className="skills-list">
-            <li>
-              <img src={require("../images/flutter.png")} alt="flutter" />
-            </li>
-            <li>
-              <img src={require("../images/dart.png")} alt="dart" />
-            </li>
-            <li>
-              <img src={require("../images/js.png")} alt="javascript" />
-            </li>
-            <li>
-              <img src={require("../images/typescript.png")} alt="typescript" />
-            </li>
-            <li>
-              <img src={require("../images/science.png")} alt="react" />
-            </li>
-            <li>
-              <img src={require("../images/html.png")} alt="html" />
-            </li>
-            <li>
-              <img src={require("../images/css-3.png")} alt="css" />
-            </li>
-            <li>
-              <img src={require("../images/java.png")} alt="java" />
-            </li>
-            <li>
-              <img src={require("../images/nodejs.png")} alt="nodejs" />
-            </li>
-          </ul>
-        </div>
-      </motion.div>
+    //     <a
+    //       href="https://github.com/nehalgamal093"
+    //       target="_blank"
+    //       rel="noreferrer"
+    //     >
+    //       <GitHubIcon fontSize="large" />
+    //     </a>
+
+    //     <a href="mailto:nehalgamal093@gmail.com">
+    //       <AlternateEmailIcon fontSize="large" />
+    //     </a>
+    //   </div>
+    //     {data.length ? (
+    //       data.map((downloadLink) => (
+    //         <a href={downloadLink.download} className="cv-container">
+    //           <span>
+    //             Download CV
+    //             <DownloadIcon
+    //               style={{ color: "white", verticalAlign: "middle" }}
+    //             />
+    //           </span>
+    //         </a>
+    //       ))
+    //     ) : (
+    //       <div></div>
+    //     )}
+    //     <div className="skil-container">
+    //       <ul className="skills-list">
+    //         <li>
+    //           <img src={require("../images/flutter.png")} alt="flutter" />
+    //         </li>
+    //         <li>
+    //           <img src={require("../images/dart.png")} alt="dart" />
+    //         </li>
+    //         <li>
+    //           <img src={require("../images/js.png")} alt="javascript" />
+    //         </li>
+    //         <li>
+    //           <img src={require("../images/typescript.png")} alt="typescript" />
+    //         </li>
+    //         <li>
+    //           <img src={require("../images/science.png")} alt="react" />
+    //         </li>
+    //         <li>
+    //           <img src={require("../images/html.png")} alt="html" />
+    //         </li>
+    //         <li>
+    //           <img src={require("../images/css-3.png")} alt="css" />
+    //         </li>
+    //         <li>
+    //           <img src={require("../images/java.png")} alt="java" />
+    //         </li>
+    //         <li>
+    //           <img src={require("../images/nodejs.png")} alt="nodejs" />
+    //         </li>
+    //       </ul>
+    //     </div>
+    //   </motion.div>
+    //   <motion.div
+    //     animate={{ x: [100, -30] }}
+    //     transition={{ duration: 5 }}
+    //     className="image-main"
+    //   ></motion.div>
+    // </div>
+    <div className="main-container">
+      {/**Start Image */}
       <motion.div
         animate={{ x: [100, -30] }}
         transition={{ duration: 5 }}
         className="image-main"
       ></motion.div>
+      {/**End Image */}
+      {/** Start Content */}
+      <div className="content-main">
+        {/**Start Description */}
+        <div className="description-main">
+          <p className="name">My name is Nehal</p>
+          <p className="title">Front-End / Flutter Developer</p>
+          <p className="my-desc">
+            I am Enthusiatic, Self-Motivated & Hard-Working Front-End & Mobile
+            Application Developer, I am always energetic and eager to learn new
+            skills, Check My Current Projects To Know More about My Skills and
+            Contact me Directly
+          </p>
+        </div>
+        {/**End Description */}
+        {/**Start Icons */}
+        <div className="icons-main">
+          <a
+            href="https://www.linkedin.com/in/nehal-gamal-8b9317262/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <LinkedInIcon  style={{ color: 'white',margin:'10px' }} fontSize="medium" />
+          </a>
+
+          <a
+            href="https://github.com/nehalgamal093"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <GitHubIcon fontSize="medium" style={{ color: 'white',margin:'10px'  }} />
+          </a>
+
+          <a href="mailto:nehalgamal093@gmail.com">
+            <AlternateEmailIcon fontSize="medium"  style={{ color: 'white',margin:'10px'  }}/>
+          </a>
+        </div>
+        {/**End Icons */}
+        {/**Start Skills */}
+        <div className="skill-container">
+          <img src={require("../images/flutter.png")} alt="flutter" />
+
+          <img src={require("../images/dart.png")} alt="dart" />
+
+          <img src={require("../images/js.png")} alt="javascript" />
+
+          <img src={require("../images/typescript.png")} alt="typescript" />
+
+          <img src={require("../images/science.png")} alt="react" />
+
+          <img src={require("../images/html.png")} alt="html" />
+
+          <img src={require("../images/css-3.png")} alt="css" />
+
+          <img src={require("../images/java.png")} alt="java" />
+
+          <img src={require("../images/nodejs.png")} alt="nodejs" />
+        </div>
+        {/**End Skills */}
+      </div>
+      {/** End Content */}
     </div>
   );
 };
