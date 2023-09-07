@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+height:50vh;
 }
 
 .card-container{
@@ -36,5 +36,22 @@ text-align: center;
   p{
     font-size: 10px;
    
+  }
+  .card-container{
+    width:10vh;
+  
+  }
+}
+@media (max-width:825px){
+  .skills-container{
+    flex-wrap: wrap;
+  }
+  p{
+    font-size: 10px;
+   
+  }
+  .card-container{
+    width:10vh;
+  
   }
 }

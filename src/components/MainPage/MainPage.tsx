@@ -6,113 +6,34 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import AlternateEmailIcon from "@mui/icons-material/AlternateEmail";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import { Skeleton, Box } from "@mui/material";
 import axios from "axios";
-type download = {
+type profile = {
+  title: string;
+  position: string;
+  summary: string;
   download: string;
+  gitlink: string;
+  googleplaylink: string;
+  email: string;
+  linkedinlink: string;
+  downloadcv: string;
+  image: string;
   _id: string;
 };
 export const MainPage = () => {
-  const [data, getData] = useState<download[]>([]);
+  const [data, getData] = useState<profile[]>([]);
   useEffect(() => {}, []);
 
   useEffect(() => {
     axios
-      .get(
-        "https://portfolio-d3gj33sv9-nehalgamal093.vercel.app/projects/get-download"
-      )
+      .get("https://ginger-nono-qwar.vercel.app/profiles")
       .then((response) => {
-        getData(response.data);
+        getData(response.data["result"]);
       })
       .catch((error) => {});
   }, []);
   return (
-    // <div className="main-page">
-
-    //   <motion.div className="description-main"
-    //     animate={{ y:50}}
-    //     transition={{ duration: 5 }}
-    //   >
-    //     <p className="name">My name is Nehal</p>
-    //     <p className="title">Front-End / Flutter Developer</p>
-    //     <p className="my-desc">
-    //       I am Enthusiatic, Self-Motivated & Hard-Working Front-End & Mobile
-    //       Application Developer, I am always energetic and eager to learn new
-    //       skills, Check My Current Projects To Know More about My Skills and
-    //       Contact me Directly
-    //     </p>
-    //     <div className="icon-main">
-    //     <a
-    //       href="https://www.linkedin.com/in/nehal-gamal-8b9317262/"
-    //       target="_blank"
-    //       rel="noreferrer"
-    //     >
-    //       <LinkedInIcon fontSize="large" />
-    //     </a>
-
-    //     <a
-    //       href="https://github.com/nehalgamal093"
-    //       target="_blank"
-    //       rel="noreferrer"
-    //     >
-    //       <GitHubIcon fontSize="large" />
-    //     </a>
-
-    //     <a href="mailto:nehalgamal093@gmail.com">
-    //       <AlternateEmailIcon fontSize="large" />
-    //     </a>
-    //   </div>
-    //     {data.length ? (
-    //       data.map((downloadLink) => (
-    //         <a href={downloadLink.download} className="cv-container">
-    //           <span>
-    //             Download CV
-    //             <DownloadIcon
-    //               style={{ color: "white", verticalAlign: "middle" }}
-    //             />
-    //           </span>
-    //         </a>
-    //       ))
-    //     ) : (
-    //       <div></div>
-    //     )}
-    //     <div className="skil-container">
-    //       <ul className="skills-list">
-    //         <li>
-    //           <img src={require("../images/flutter.png")} alt="flutter" />
-    //         </li>
-    //         <li>
-    //           <img src={require("../images/dart.png")} alt="dart" />
-    //         </li>
-    //         <li>
-    //           <img src={require("../images/js.png")} alt="javascript" />
-    //         </li>
-    //         <li>
-    //           <img src={require("../images/typescript.png")} alt="typescript" />
-    //         </li>
-    //         <li>
-    //           <img src={require("../images/science.png")} alt="react" />
-    //         </li>
-    //         <li>
-    //           <img src={require("../images/html.png")} alt="html" />
-    //         </li>
-    //         <li>
-    //           <img src={require("../images/css-3.png")} alt="css" />
-    //         </li>
-    //         <li>
-    //           <img src={require("../images/java.png")} alt="java" />
-    //         </li>
-    //         <li>
-    //           <img src={require("../images/nodejs.png")} alt="nodejs" />
-    //         </li>
-    //       </ul>
-    //     </div>
-    //   </motion.div>
-    //   <motion.div
-    //     animate={{ x: [100, -30] }}
-    //     transition={{ duration: 5 }}
-    //     className="image-main"
-    //   ></motion.div>
-    // </div>
     <div className="main-container">
       {/**Start Image */}
       <motion.div
@@ -124,57 +45,90 @@ export const MainPage = () => {
       {/** Start Content */}
       <div className="content-main">
         {/**Start Description */}
-        <div className="description-main">
-          <p className="name">My name is Nehal</p>
-          <p className="title">Front-End / Flutter Developer</p>
-          <p className="my-desc">
-            I am Enthusiatic, Self-Motivated & Hard-Working Front-End & Mobile
-            Application Developer, I am always energetic and eager to learn new
-            skills, Check My Current Projects To Know More about My Skills and
-            Contact me Directly
-          </p>
-        </div>
-        {/**End Description */}
-        {/**Start download */}
-            {data.length ? (
-          data.map((downloadLink) => (
-         <div className='download-btn'>
-             <a href={downloadLink.download} className="cv-container" style={{textDecoration:'none',color:'white'}}>
-              <span>
-                Download CV
-                <DownloadIcon
-                  style={{ color: "white", verticalAlign: "middle" }}
-                />
-              </span>
-            </a>
-         </div>
+        {data.length ? (
+          data.map((e) => (
+            <div className="description-main">
+              <p className="name">{e.title}</p>
+              <p className="title">{e.position}</p>
+              <p className="my-desc">{e.summary}</p>
+            </div>
           ))
         ) : (
-          <div></div>
+          <Box sx={{direction:'ltr'}}>
+            <Skeleton
+              variant="rounded"
+             
+              width={200}
+              height={30}
+              className="description-main"
+            />
+            <Skeleton
+              variant="rounded"
+              width={500}
+              height={20}
+              className="description-main"
+            />
+
+            <Skeleton
+              variant="rounded"
+              width={500}
+              height={20}
+              className="description-main"
+            />
+          </Box>
         )}
-         {/**End download */}
+        {/**End Description */}
+        {/**Start download */}
+        {data.length ? (
+          data.map((link) => (
+            <div className="download-btn">
+              <a
+                href={link.downloadcv}
+                className="cv-container"
+                style={{ textDecoration: "none", color: "white" }}
+              >
+                <span>
+                  Download CV
+                  <DownloadIcon
+                    style={{ color: "white", verticalAlign: "middle" }}
+                  />
+                </span>
+              </a>
+            </div>
+          ))
+        ) : (
+          <Skeleton variant="rectangular" width={150} height={40} />
+        )}
+        {/**End download */}
         {/**Start Icons */}
-        <div className="icons-main">
-          <a
-            href="https://www.linkedin.com/in/nehal-gamal-8b9317262/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <LinkedInIcon  style={{ color: 'white',margin:'10px' }} fontSize="medium" />
-          </a>
+        {data.length ? (
+          data.map((e) => (
+            <div className="icons-main">
+              <a href={e.linkedinlink} target="_blank" rel="noreferrer">
+                <LinkedInIcon
+                  style={{ color: "white", margin: "10px" }}
+                  fontSize="medium"
+                />
+              </a>
 
-          <a
-            href="https://github.com/nehalgamal093"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <GitHubIcon fontSize="medium" style={{ color: 'white',margin:'10px'  }} />
-          </a>
+              <a href={e.gitlink} target="_blank" rel="noreferrer">
+                <GitHubIcon
+                  fontSize="medium"
+                  style={{ color: "white", margin: "10px" }}
+                />
+              </a>
 
-          <a href="mailto:nehalgamal093@gmail.com">
-            <AlternateEmailIcon fontSize="medium"  style={{ color: 'white',margin:'10px'  }}/>
-          </a>
-        </div>
+              <a href={e.email}>
+                <AlternateEmailIcon
+                  fontSize="medium"
+                  style={{ color: "white", margin: "10px" }}
+                />
+              </a>
+            </div>
+          ))
+        ) : (
+          <Skeleton variant="rectangular" width={200} height={20} />
+        )}
         {/**End Icons */}
         {/**Start Skills */}
         <div className="skill-container">

@@ -10,15 +10,15 @@ export const ProjectDetails = () => {
   return (
     <div className="project-screen-container">
       <div className="details-container">
-        <motion.h1 animate={{ y: -10 }} transition={{ duration: 1 }}>
-          {location.state.name}
+        <motion.h1 animate={{ y: -10 }} transition={{ duration: 1 }} style={{marginBottom:'0px'}}>
+          {location.state.title}
         </motion.h1>
         <motion.p
           animate={{ y: -10 }}
           transition={{ duration: 1 }}
           className="project-desc"
         >
-          {location.state.desc}
+          {location.state.description}
         </motion.p>
         <Stack
           component={motion.div}
@@ -33,7 +33,7 @@ export const ProjectDetails = () => {
               <Chip
                 label={tag}
                 variant="filled"
-                style={{ color: "white", background: "rgba(8, 8, 8, 0.288)" ,margin:'1vw'}}
+                style={{ color: "white", background: "rgba(8, 8, 8, 0.288)" ,margin:'5px'}}
               />
             ))
           ) : (
@@ -41,35 +41,36 @@ export const ProjectDetails = () => {
           )}
         </Stack>
         <div className="icon-container">
-          {location.state.gitLink === "" ? (
-            <a
-              href={location.state.googlePlayLink}
-              target="_blank"
-              rel="noreferrer"
-            >
-              <img src={require("./google-play.png")} alt="googleplay link" />
-            </a>
+          {location.state.googleplaylink === "undefined" ? (
+             <a href={location.state.gitLink} target="_blank" rel="noreferrer">
+             <img
+               src={require("./github.png")}
+               alt="github project link"
+               color="white"
+             />
+           </a>
           ) : (
-            <a href={location.state.gitLink} target="_blank" rel="noreferrer">
-              <img
-                src={require("./github.png")}
-                alt="github project link"
-                color="white"
-              />
-            </a>
+           
+            <a
+            href={location.state.googlePlayLink}
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img src={require("./google-play.png")} alt="googleplay link" />
+          </a>
           )}
         </div>
       </div>
 
       <div className="img-list">
         {location.state.images.length ? (
-          location.state.images.map((img: string) => (
+          location.state.images.map((img:any) => (
             <motion.img
               animate={{ x: 20, opacity: 1 }}
               initial={{ opacity: 0.5 }}
               transition={{ duration: 3 }}
               alt="location.name"
-              src={img}
+              src={img.attachment_file}
               style={{
                 width: location.state.type === "flutter" ? "13vw" : "40vw",
                 height: location.state.type === "flutter" ? "30vw" : "20vw",

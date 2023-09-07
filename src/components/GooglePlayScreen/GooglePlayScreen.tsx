@@ -3,62 +3,72 @@ import "aos/dist/aos.css";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
+import {Box,Skeleton} from '@mui/material';
+
+
 type resultProps = {
-  name: string;
-  images: [];
-  desc: string;
-  googlePlayLink: string;
-  gitLink: string;
+  title: string;
+  images: [
+    {
+      attachment_file: string;
+      cloudinary_id: string;
+    }
+  ];
+  description: string;
+  googleplaylink: string;
+  gitlink: string;
   tags: [];
-  mainImg: string;
-  type:string;
+  // mainImg: string;
+  cover: string;
+  type: string;
+  _id: string;
 };
 export const GooglePlayScreen = () => {
   const [data, getData] = useState<resultProps[]>([]);
 
   useEffect(() => {
     axios
-      .get("https://portfolio-d3gj33sv9-nehalgamal093.vercel.app/projects/get-project")
+      .get("https://ginger-nono-qwar.vercel.app/projects")
       .then((response) => {
-       
-        getData(response.data);
+        //  🚀 Launch your request or whatever
+        getData(response.data["result"]);
       })
-      .catch((error) => {
-
-      });
+      .catch((error) => {});
   }, []);
   const navigate = useNavigate();
   return (
     <div className="projects-container">
       {data.length ? (
         data.map((project) =>
-          project.gitLink === "" ? (
+          project.googleplaylink !== "undefined" ? (
             <motion.div
               className="projects-card"
               whileHover={{ scale: 1.1 }}
-              animate={{ y: -10 }} transition={{ duration: 1 }}
+              animate={{ y: -10 }}
+              transition={{ duration: 1 }}
               onClick={() =>
                 navigate("/project-details", {
                   state: {
-                    name: project.name,
-                    desc: project.desc,
+                    title: project.title,
+                    description: project.description,
                     images: project.images,
-                    googlePlayLink: project.googlePlayLink,
-                    gitLink: project.gitLink,
+                    googlePlayLink: project.googleplaylink,
+                    gitLink: project.gitlink,
                     tags: project.tags,
-                    type:project.type
+                    type: project.type,
                   },
                 })
               }
             >
               <div className="con-container">
                 <img
-                  src={project.mainImg}
+                  src={project.cover}
                   width="300px"
                   height="400px"
                   alt="main"
                 />
-                <h4>{project.name}</h4>
+                <h4>{project.title}</h4>
+                <p className="desc">{project.description}</p>
               </div>
             </motion.div>
           ) : (
@@ -66,7 +76,20 @@ export const GooglePlayScreen = () => {
           )
         )
       ) : (
-        <div></div>
+        <Box  className="skeleton-container">
+        <Skeleton
+         variant="rounded"
+         className="skeleton"
+       />
+       <Skeleton
+         variant="rounded"
+         className="skeleton"
+       />
+       <Skeleton
+         variant="rounded"
+         className="skeleton"
+       />
+    </Box>
       )}
     </div>
   );

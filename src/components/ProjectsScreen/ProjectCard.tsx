@@ -4,13 +4,13 @@ import { useNavigate, useLocation, useParams } from "react-router-dom";
 import { motion } from "framer-motion";
 export const ProjectCard = ({
   _id,
-  desc,
-  googlePlayLink,
-  gitLink,
+  description,
+  googleplaylink,
+  gitlink,
   images,
-  name,
+  title,
   type,
-  mainImg,
+cover,
   tags,
 }: resultProps) => {
   
@@ -28,23 +28,25 @@ export const ProjectCard = ({
       onClick={() =>
         navigate("/project-details", {
           state: {
-            name,
-            desc,
+            title,
+            description,
             images,
-            googlePlayLink,
-            gitLink,
+            googleplaylink,
+            gitlink,
             tags,
+            cover,
             type,
           },
         })
       }
     >
       <div className="con-container">
-        <img src={mainImg}  alt="main" style={{
+        <img src={cover}  alt="main" style={{
         width: type === "flutter" ? "15vw" : "30vw",
         height: type === "flutter" ? "30vw" : "20vw",
       }} />
-        <h4>{name}</h4>
+        <h4>{title}</h4>
+        <p className="desc">{description}</p>
       </div>
     </motion.div>
   );

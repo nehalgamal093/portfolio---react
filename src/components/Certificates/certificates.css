@@ -1,7 +1,9 @@
 .cert-container {
-  width: 100%;
+
   padding-top: 50px;
   padding-bottom: 50px;
+ margin-right: 20px;
+ margin-left: 20px;
 }
 img.certs {
   height: 450px;
@@ -9,9 +11,21 @@ img.certs {
   margin-left: auto;
   margin-right: auto;
 }
-
+.cert-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.skeleton-container{
+  width:600px !important;
+  height:400px !important;
+}
 @media (max-width: 950px) {
   img.certs {
     height: 250px;
+  }
+  .skeleton-container{
+    width:300px !important;
+    height:250px !important;
   }
 }

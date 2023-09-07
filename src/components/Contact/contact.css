@@ -1,4 +1,4 @@
-.contact-container {
+/* .contact-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -86,4 +86,47 @@ input:focus {
   
   }
 }
-
+ */
+ .form-control {
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+.form-control input {
+  width: 80wv;
+  padding: 1vw 1vw;
+  margin: .8vw 0;
+  border: 0px solid;
+  border-radius: .5vw;
+  background: rgba(255, 255, 255, 0.322);
+  color: white;
+}
+input[type="text"] {
+  text-transform: capitalize;
+}
+::placeholder {
+  color: white;
+}
+textarea:focus,
+input:focus {
+  outline: none;
+}
+.form-control textarea {
+  text-transform: capitalize;
+  width: 30vw;
+  height: 10vh;
+  padding: 1px 1px;
+  border-radius: 5px;
+  margin: 1vw 0;
+  background: rgba(255, 255, 255, 0.322);
+  color: white;
+}
+.form-control button {
+  display: flex;
+  justify-content: center;
+  background: black;
+  color: white;
+  padding: .8vw 0;
+  width:10vw;
+  margin-top: 3vw;
+}

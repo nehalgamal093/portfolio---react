@@ -8,9 +8,10 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import "swiper/css";
+import { Skeleton, Box } from "@mui/material";
 
 type certificates = {
-  certImages: string;
+  image: string;
   _id: string;
 };
 
@@ -19,14 +20,11 @@ export const Certificates = () => {
 
   useEffect(() => {
     axios
-      .get("https://portfolio-d3gj33sv9-nehalgamal093.vercel.app/projects/get-cert")
+      .get("https://ginger-nono-qwar.vercel.app/certificates")
       .then((response) => {
-   
-        getData(response.data);
+        getData(response.data["result"]);
       })
-      .catch((error) => {
- 
-      });
+      .catch((error) => {});
   }, []);
 
   return (
@@ -46,11 +44,15 @@ export const Certificates = () => {
         {data.length ? (
           data.map((item) => (
             <SwiperSlide>
-              <img className="certs" src={item.certImages} alt="certificate" />
+              <img className="certs" src={item.image} alt="certificate" />
             </SwiperSlide>
           ))
         ) : (
-          <div></div>
+          <div>
+            <Box className="cert-container">
+              <Skeleton className="skeleton-container" variant="rounded" />
+            </Box>
+          </div>
         )}
       </Swiper>
     </div>

@@ -3,17 +3,23 @@ import "./projectsscreens.css";
 import { CircularProgress } from "@mui/material";
 
 import axios from "axios";
-import { useParams ,Outlet} from "react-router-dom";
+import { useParams, Outlet } from "react-router-dom";
 import { ProjectCard } from "./ProjectCard";
-
+import {Skeleton,Box} from '@mui/material'
 export type resultProps = {
-  name: string;
-  images: [];
-  desc: string;
-  googlePlayLink: string;
-  gitLink: string;
+  title: string;
+  images: [
+    {
+      attachment_file: string;
+      cloudinary_id: string;
+    }
+  ];
+  description: string;
+  googleplaylink: string;
+  gitlink: string;
   tags: [];
-  mainImg: string;
+  // mainImg: string;
+  cover: string;
   type: string;
   _id: string;
 };
@@ -22,57 +28,59 @@ export const ProjectsScreen = () => {
   const { type } = useParams();
   useEffect(() => {
     axios
-      .get("https://portfolio-d3gj33sv9-nehalgamal093.vercel.app/projects/get-project")
+      .get("https://ginger-nono-qwar.vercel.app/projects")
       .then((response) => {
-
-        const val = response.data.filter((item: resultProps) => {
-
-
+        const val = response.data["result"].filter((item: resultProps) => {
           return item.type === type;
         });
         getData(val as resultProps[]);
-   
       })
       .catch((error) => {
-
+        console.log(error);
       });
   }, [type]);
 
   return (
     <div className="projects-container">
-      {data ? (
+      {data.length ? (
         data.map((project) => {
-          console.log(`${type}`);
-          console.log(`${project.name}`);
+   
           return (
             <ProjectCard
               _id={project._id}
-              desc={project.desc}
-              googlePlayLink={project.googlePlayLink}
-              gitLink={project.gitLink}
+              description={project.description}
+              googleplaylink={project.googleplaylink}
+              gitlink={project.gitlink}
               images={project.images}
-              name={project.name}
+              title={project.title}
               type={project.type}
-              mainImg={project.mainImg}
+              cover={project.cover}
               tags={project.tags}
             />
           );
         })
       ) : (
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            flexDirection: "column",
-            width: "100%",
-            height: "100%",
-          }}
-        >
-          <CircularProgress />
-        </div>
-      )}
       
+         <Box className="skeleton-container">
+             <Skeleton
+              variant="rounded"
+          
+            className= 'skeleton'
+
+            />
+            <Skeleton
+              variant="rounded"
+             className= 'skeleton'
+     
+            />
+            <Skeleton
+              variant="rounded"
+             className= 'skeleton'
+           
+            />
+         </Box>
+
+      )}
     </div>
   );
 };

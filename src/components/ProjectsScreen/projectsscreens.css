@@ -2,27 +2,115 @@
   display:flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  flex-wrap:wrap;
+padding: 50px;
+
+
 }
 .projects-card{
   display: flex;
-justify-content: center;
+justify-content: center ;
 align-items: center;
 padding: 2vw;
-text-align: center;
+text-align: center !important;
 color:white;
-margin-right: 2vw;
+margin: 50px;
 border-radius: 1vw;
   background: rgba(8, 8, 8, 0.288);
   box-shadow: rgba(94, 1, 1, 0.16) 0px 1px 4px ;
+  width: 15%;
 }
 .con-container img{
   width:15vw;
   height:30vw;
 }
-@media (max-width:650px){
-  .projects-container{
-    flex-wrap: wrap;
-    height: 80vh;
-  } 
+.projects-card .con-container p{
+  display: none !important;
+}
+.skeleton-container{
+  display:flex;
+  flex-direction: row;
+}
+.skeleton{
+  width:200px !important;
+  height:500px !important;
+  margin:10px !important;
+}
+@media (max-width:650px)  {
+ 
+  .projects-card{
+    width:500px;
+padding: 10px;
+    margin: 20px;
+    margin-bottom: 10px;
+  }
+  .projects-card .con-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  .projects-card .con-container img {
+    display: none;
+  }
+  .projects-card .con-container h4 {
+
+    margin-bottom: 0 !important;
+  }
+  .projects-card .con-container p.desc {
+    display: block !important;
+text-align: start;
+
+  }
+  .skeleton-container{
+  display:flex;
+    flex-direction: column ;
+    justify-content: center;
+    align-items: center;
+  }
+  .skeleton{
+    width:200px !important;
+    height:400px !important;
+    margin:10px !important;
+  }
+  
+}
+@media (max-width:825px)  {
+ 
+  .projects-card{
+    width:600px;
+padding: 10px;
+    margin: 20px;
+    margin-bottom: 10px;
+  }
+  .projects-card .con-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: start;
+    
+  }
+  .projects-card .con-container img {
+    display: none;
+  }
+  .projects-card .con-container h4 {
+
+    margin-bottom: 0 !important;
+  }
+  .projects-card .con-container p.desc {
+    display: block !important;
+text-align: start;
+
+  }
+  .skeleton-container{
+  display:flex;
+    flex-direction: column ;
+    align-items: center;
+  }
+  .skeleton{
+    width:500px !important;
+    height:100px !important;
+    margin:10px !important;
+  }
+  
 }
