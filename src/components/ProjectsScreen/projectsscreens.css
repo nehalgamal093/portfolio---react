@@ -69,7 +69,7 @@ text-align: start;
     align-items: center;
   }
   .skeleton{
-    width:200px !important;
+    width:350px !important;
     height:400px !important;
     margin:10px !important;
   }
@@ -108,7 +108,7 @@ text-align: start;
     align-items: center;
   }
   .skeleton{
-    width:500px !important;
+    width:350px !important;
     height:100px !important;
     margin:10px !important;
   }

@@ -129,4 +129,31 @@ input:focus {
   padding: .8vw 0;
   width:10vw;
   margin-top: 3vw;
+  
+}
+.form-container{
+  padding:50px;
+  background-color: rgba(8, 8, 8, 0.288);
+}
+@media (max-width: 650px) {
+.form-container{
+  width:200px
+}
+.form-control textarea {
+  text-transform: capitalize;
+  width:200px;
+  height: 10vh;
+  padding: 1px 1px;
+  border-radius: 5px;
+  margin: 1vw 0;
+  background: rgba(255, 255, 255, 0.322);
+  color: white;
+}
+.form-control button {
+
+  padding: .8vw 0;
+  width:50px;
+  margin-top: 3vw;
+  
+}
 }

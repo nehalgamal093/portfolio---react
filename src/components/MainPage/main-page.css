@@ -65,9 +65,19 @@ margin: 0 auto;
   flex-direction: row;
 }
 .skill-container img {
-  width: 20px;
-  margin: 20px;
+  width: 40px !important;
+  margin: 5px !important;
 }
+.skeleton-main-one{
+width:200px !important;
+height:20px !important;
+margin: 10px;
+}
+.skeleton-main-two{
+  width:500px !important;
+  height:20px !important;
+  margin: 10px;
+  }
 @media (max-width: 480px) {
   .main-container {
     display: flex;
@@ -112,6 +122,16 @@ margin: 0 auto;
     width: 20px;
     margin: 5px;
   }
+  .skeleton-main-one{
+    width:100px !important;
+    height:20px !important;
+    margin: 10px;
+    }
+    .skeleton-main-two{
+      width:300px !important;
+      height:20px !important;
+      margin: 10px;
+      }
 }
 
 @media (min-width: 481px) and (max-width: 767px) {
@@ -158,6 +178,16 @@ margin: 0 auto;
     width: 20px;
     margin: 5px;
   }
+  .skeleton-main-one{
+    width:100px !important;
+    height:20px !important;
+    margin: 10px;
+    }
+    .skeleton-main-two{
+      width:300px !important;
+      height:20px !important;
+      margin: 10px;
+      }
 }
    /* Media Query for Tablets Ipads portrait mode */
    @media (min-width: 768px) and (max-width: 1024px){
@@ -204,6 +234,16 @@ margin: 0 auto;
       width: 20px;
       margin: 5px;
     }
+    .skeleton-main-one{
+      width:100px !important;
+      height:20px !important;
+      margin: 10px;
+      }
+      .skeleton-main-two{
+        width:300px !important;
+        height:20px !important;
+        margin: 10px;
+        }
 }
   
 /* Media Query for Laptops and Desktops */
@@ -251,6 +291,16 @@ margin: 0 auto;
     width: 20px;
     margin: 5px;
   }
+  .skeleton-main-one{
+    width:100px !important;
+    height:20px !important;
+    margin: 10px;
+    }
+    .skeleton-main-two{
+      width:300px !important;
+      height:20px !important;
+      margin: 10px;
+      }
 }
 
    /* Media Query for Large screens */
@@ -273,5 +323,15 @@ margin: 0 auto;
       width: 40px;
       margin: 5px;
     }
+     .skeleton-main-one{
+    width:100px !important;
+    height:20px !important;
+    margin: 10px;
+    }
+    .skeleton-main-two{
+      width:300px !important;
+      height:20px !important;
+      margin: 10px;
+      }
 }
   

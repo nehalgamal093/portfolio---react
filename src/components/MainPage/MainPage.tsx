@@ -36,11 +36,8 @@ export const MainPage = () => {
   return (
     <div className="main-container">
       {/**Start Image */}
-      <motion.div
-        animate={{ x: [100, -30] }}
-        transition={{ duration: 5 }}
-        className="image-main"
-      ></motion.div>
+      <div className="image-main"
+      ></div>
       {/**End Image */}
       {/** Start Content */}
       <div className="content-main">
@@ -54,27 +51,11 @@ export const MainPage = () => {
             </div>
           ))
         ) : (
-          <Box sx={{direction:'ltr'}}>
-            <Skeleton
-              variant="rounded"
-             
-              width={200}
-              height={30}
-              className="description-main"
-            />
-            <Skeleton
-              variant="rounded"
-              width={500}
-              height={20}
-              className="description-main"
-            />
+          <Box sx={{ direction: "ltr" }}>
+            <Skeleton variant="rounded" className="skeleton-main-one" />
+            <Skeleton variant="rounded" className="skeleton-main-two" />
 
-            <Skeleton
-              variant="rounded"
-              width={500}
-              height={20}
-              className="description-main"
-            />
+            <Skeleton variant="rounded" className="skeleton-main-two" />
           </Box>
         )}
         {/**End Description */}

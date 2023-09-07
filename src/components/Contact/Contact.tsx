@@ -64,8 +64,8 @@ export const Contact = () => {
     //     </form>
     //   </div>
     // </div>
-    <Box sx={{width:'100vw'}} display='flex' justifyContent='center'>
-<Box sx={{backgroundColor:'rgba(8, 8, 8, 0.288)',padding:'20px'}}>
+    <Box sx={{width:'100vw'}} display='flex' justifyContent='center' >
+<Box className='form-container'>
      <h1 style={{color:'white'}}>Contact me</h1>
          <form ref={form} onSubmit={sendEmail}>
            <div className="form-control">
