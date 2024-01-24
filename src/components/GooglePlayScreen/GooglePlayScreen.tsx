@@ -3,8 +3,8 @@ import "aos/dist/aos.css";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
-import {Box,Skeleton} from '@mui/material';
-
+import Lottie from "lottie-react";
+import loadingImg from "../assets/lotties/loading.json";
 
 type resultProps = {
   title: string;
@@ -76,21 +76,25 @@ export const GooglePlayScreen = () => {
           )
         )
       ) : (
-        <Box  className="skeleton-container">
-        <Skeleton
-         variant="rounded"
-         className="skeleton"
-       />
-       <Skeleton
-         variant="rounded"
-         className="skeleton"
-       />
-       <Skeleton
-         variant="rounded"
-         className="skeleton"
-       />
-    </Box>
+        <Loading />
       )}
+    </div>
+  );
+};
+
+export const Loading = () => {
+  return (
+    <div
+      style={{
+        margin: "0 auto",
+        height: "500px",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+    >
+      <Lottie loop={true} animationData={loadingImg} height={400} width={400} />
     </div>
   );
 };
