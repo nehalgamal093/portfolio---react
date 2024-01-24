@@ -36,8 +36,7 @@ export const MainPage = () => {
   return (
     <div className="main-container">
       {/**Start Image */}
-      <div className="image-main"
-      ></div>
+      <div className="image-main"></div>
       {/**End Image */}
       {/** Start Content */}
       <div className="content-main">
@@ -130,6 +129,7 @@ export const MainPage = () => {
           <img src={require("../images/java.png")} alt="java" />
 
           <img src={require("../images/nodejs.png")} alt="nodejs" />
+          <img src={require("../images/android.png")} alt="nodejs" />
         </div>
         {/**End Skills */}
       </div>

@@ -20,10 +20,6 @@ export const ProjectCard = ({
       animate={{ y: -10 }}
       transition={{ duration: 1 }}
       className="projects-card"
-      style={{
-        width: type === "flutter" ? "15vw" : "30vw",
-        height: type === "flutter" ? "35vw" : "25vw",
-      }}
       key={_id}
       onClick={() =>
         navigate("/project-details", {
@@ -40,13 +36,7 @@ export const ProjectCard = ({
         })
       }
     >
-      <div
-        className="con-container"
-        style={{
-          width: type === "flutter" ? "15vw" : "30vw",
-          height: type === "flutter" ? "30vw" : "20vw",
-        }}
-      >
+      <div className="con-container">
         <img
           src={cover}
           alt="main"
