@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from "react";
 import "./projectsscreens.css";
-import { CircularProgress } from "@mui/material";
-import Image from "../images/astro.png";
 import axios from "axios";
 import { useParams, Outlet } from "react-router-dom";
 import { ProjectCard } from "./ProjectCard";
-import { Skeleton, Box } from "@mui/material";
+
 import Lottie from "lottie-react";
 import loadingImg from "../assets/lotties/loading.json";
 import astronaut from "../assets/lotties/astronaut.json";
@@ -28,7 +26,7 @@ export type resultProps = {
 };
 export const ProjectsScreen = () => {
   const [data, getData] = useState<resultProps[]>([]);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const { type } = useParams();
   useEffect(() => {
     setLoading(true);
@@ -38,7 +36,6 @@ export const ProjectsScreen = () => {
         const val = response.data["result"].filter((item: resultProps) => {
           return item.type === type;
         });
-
         getData(val as resultProps[]);
         setLoading(false);
       })
@@ -52,7 +49,7 @@ export const ProjectsScreen = () => {
     <div className="projects-container">
       {loading ? (
         <ProjectLoadingSkeleton />
-      ) : data.length > 0 ? (
+      ) : data.length ? (
         data.map((project) => {
           return (
             <ProjectCard
