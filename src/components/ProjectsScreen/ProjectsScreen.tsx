@@ -5,7 +5,7 @@ import { CircularProgress } from "@mui/material";
 import axios from "axios";
 import { useParams, Outlet } from "react-router-dom";
 import { ProjectCard } from "./ProjectCard";
-import {Skeleton,Box} from '@mui/material'
+import { Skeleton, Box } from "@mui/material";
 export type resultProps = {
   title: string;
   images: [
@@ -44,7 +44,6 @@ export const ProjectsScreen = () => {
     <div className="projects-container">
       {data.length ? (
         data.map((project) => {
-   
           return (
             <ProjectCard
               _id={project._id}
@@ -60,26 +59,11 @@ export const ProjectsScreen = () => {
           );
         })
       ) : (
-      
-         <Box className="skeleton-container">
-             <Skeleton
-              variant="rounded"
-          
-            className= 'skeleton'
-
-            />
-            <Skeleton
-              variant="rounded"
-             className= 'skeleton'
-     
-            />
-            <Skeleton
-              variant="rounded"
-             className= 'skeleton'
-           
-            />
-         </Box>
-
+        <Box className="skeleton-container">
+          <Skeleton variant="rounded" className="skeleton" />
+          <Skeleton variant="rounded" className="skeleton" />
+          <Skeleton variant="rounded" className="skeleton" />
+        </Box>
       )}
     </div>
   );

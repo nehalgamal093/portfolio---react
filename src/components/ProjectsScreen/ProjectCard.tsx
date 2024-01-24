@@ -10,21 +10,21 @@ export const ProjectCard = ({
   images,
   title,
   type,
-cover,
+  cover,
   tags,
 }: resultProps) => {
-  
-
   const navigate = useNavigate();
   return (
     <motion.div
-  
-    whileHover={{ scale: 1.1 }}
-    animate={{ y: -10 }} transition={{ duration: 1 }}
+      whileHover={{ scale: 1.1 }}
+      animate={{ y: -10 }}
+      transition={{ duration: 1 }}
       className="projects-card"
+      style={{
+        width: type === "flutter" ? "15vw" : "30vw",
+        height: type === "flutter" ? "35vw" : "25vw",
+      }}
       key={_id}
-     
-
       onClick={() =>
         navigate("/project-details", {
           state: {
@@ -40,11 +40,21 @@ cover,
         })
       }
     >
-      <div className="con-container">
-        <img src={cover}  alt="main" style={{
-        width: type === "flutter" ? "15vw" : "30vw",
-        height: type === "flutter" ? "30vw" : "20vw",
-      }} />
+      <div
+        className="con-container"
+        style={{
+          width: type === "flutter" ? "15vw" : "30vw",
+          height: type === "flutter" ? "30vw" : "20vw",
+        }}
+      >
+        <img
+          src={cover}
+          alt="main"
+          style={{
+            width: type === "flutter" ? "15vw" : "30vw",
+            height: type === "flutter" ? "30vw" : "20vw",
+          }}
+        />
         <h4>{title}</h4>
         <p className="desc">{description}</p>
       </div>
