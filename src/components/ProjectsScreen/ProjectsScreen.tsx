@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./projectsscreens.css";
 import axios from "axios";
-import { useParams, Outlet } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { ProjectCard } from "./ProjectCard";
 
 import Lottie from "lottie-react";

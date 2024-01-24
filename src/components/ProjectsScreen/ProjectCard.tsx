@@ -1,6 +1,6 @@
 import React from "react";
 import { resultProps } from "./ProjectsScreen";
-import { useNavigate, useLocation, useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 export const ProjectCard = ({
   _id,
