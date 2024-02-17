@@ -85,14 +85,8 @@ export const ProjectDetails = () => {
               alt="location.name"
               src={img.attachment_file}
               style={{
-                width:
-                  location.state.type === "flutter" || "android"
-                    ? "13vw"
-                    : "40vw",
-                height:
-                  location.state.type === "flutter" || "android"
-                    ? "30vw"
-                    : "20vw",
+                width: location.state.type === "react" ? "40vw" : "13vw",
+                height: location.state.type === "react" ? "20vw" : "30vw",
               }}
             />
           ))

@@ -38,7 +38,7 @@ export const SkillsScreen = () => {
         </div>
         <p>React js</p>
       </motion.div>
-      <motion.div
+      {/* <motion.div
         className="card-container"
         whileHover={{ scale: 1.1 }}
         onClick={() => navigate("html")}
@@ -54,7 +54,7 @@ export const SkillsScreen = () => {
           </span>
         </div>
         <p>HtML/CSS</p>
-      </motion.div>
+      </motion.div> */}
       <motion.div
         className="card-container"
         whileHover={{ scale: 1.1 }}

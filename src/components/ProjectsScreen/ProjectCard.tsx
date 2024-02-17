@@ -23,8 +23,8 @@ export const ProjectCard = ({
       className="projects-card"
       key={_id}
       style={{
-        width: type === "react" ? "40vw" : "20vw",
-        height: type === "react" ? "30vw" : "35vw",
+        width: type === "react" ? "30vw" : "10vw",
+        height: type === "react" ? "30vw" : "25vw",
       }}
       onClick={() =>
         navigate("/project-details", {
@@ -46,8 +46,8 @@ export const ProjectCard = ({
           src={cover}
           alt="main"
           style={{
-            width: type === "react" ? "40vw" : "15vw",
-            height: type === "react" ? "30vw" : "30vw",
+            width: type === "react" ? "30vw" : "10vw",
+            height: type === "react" ? "30vw" : "20vw",
           }}
         />
         <h4>{title}</h4>
