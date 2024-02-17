@@ -14,6 +14,7 @@ export const ProjectCard = ({
   tags,
 }: resultProps) => {
   const navigate = useNavigate();
+  console.log(`type is ==== ${type} `);
   return (
     <motion.div
       whileHover={{ scale: 1.1 }}
@@ -21,6 +22,10 @@ export const ProjectCard = ({
       transition={{ duration: 1 }}
       className="projects-card"
       key={_id}
+      style={{
+        width: type === "react" ? "40vw" : "20vw",
+        height: type === "react" ? "30vw" : "35vw",
+      }}
       onClick={() =>
         navigate("/project-details", {
           state: {
@@ -41,12 +46,12 @@ export const ProjectCard = ({
           src={cover}
           alt="main"
           style={{
-            width: type === "flutter" || "android" ? "15vw" : "30vw",
-            height: type === "flutter" || "android" ? "30vw" : "20vw",
+            width: type === "react" ? "40vw" : "15vw",
+            height: type === "react" ? "30vw" : "30vw",
           }}
         />
         <h4>{title}</h4>
-        <p className="desc">{description}</p>
+        {/* <p className="desc">{description}</p> */}
       </div>
     </motion.div>
   );

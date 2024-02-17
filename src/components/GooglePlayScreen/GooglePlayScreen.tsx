@@ -46,6 +46,10 @@ export const GooglePlayScreen = () => {
               whileHover={{ scale: 1.1 }}
               animate={{ y: -10 }}
               transition={{ duration: 1 }}
+              style={{
+                width: "20vw",
+                height: "70vh",
+              }}
               onClick={() =>
                 navigate("/project-details", {
                   state: {
@@ -63,12 +67,14 @@ export const GooglePlayScreen = () => {
               <div className="con-container">
                 <img
                   src={project.cover}
-                  width="300px"
-                  height="400px"
+                  style={{
+                    width: "15vw",
+                    height: "60vh",
+                  }}
                   alt="main"
                 />
                 <h4>{project.title}</h4>
-                <p className="desc">{project.description}</p>
+                {/* <p className="desc">{project.description}</p> */}
               </div>
             </motion.div>
           ) : (

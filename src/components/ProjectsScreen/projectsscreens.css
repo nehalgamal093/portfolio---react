@@ -18,13 +18,13 @@
   box-shadow: rgba(94, 1, 1, 0.16) 0px 1px 4px;
   width: 30%;
 }
-.con-container img {
+/* .con-container img {
   width: 15vw;
   height: 30vw;
-}
-.projects-card .con-container p {
+} */
+/* .projects-card .con-container p {
   display: none !important;
-}
+} */
 .skeleton-container {
   display: flex;
   flex-direction: row;
