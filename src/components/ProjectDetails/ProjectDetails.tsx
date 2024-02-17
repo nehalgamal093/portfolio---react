@@ -86,7 +86,7 @@ export const ProjectDetails = () => {
               src={img.attachment_file}
               style={{
                 width: location.state.type === "react" ? "40vw" : "13vw",
-                height: location.state.type === "react" ? "20vw" : "30vw",
+                height: location.state.type === "react" ? "30vw" : "30vw",
               }}
             />
           ))
