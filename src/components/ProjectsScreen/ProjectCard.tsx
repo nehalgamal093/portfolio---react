@@ -41,8 +41,8 @@ export const ProjectCard = ({
           src={cover}
           alt="main"
           style={{
-            width: type === "flutter" ? "15vw" : "30vw",
-            height: type === "flutter" ? "30vw" : "20vw",
+            width: type === "flutter" || "android" ? "15vw" : "30vw",
+            height: type === "flutter" || "android" ? "30vw" : "20vw",
           }}
         />
         <h4>{title}</h4>

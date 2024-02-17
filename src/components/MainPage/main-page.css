@@ -1,20 +1,18 @@
-
 .main-container {
   display: flex;
   height: 70vh;
 
-justify-content: center;
+  justify-content: center;
   direction: rtl;
   flex-direction: row;
 }
 
 .image-main {
   width: 20%;
-  background-image: url("../images/portfolio.png");
+  background-image: url("../images/my-pic.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center top;
-
 }
 .content-main {
   justify-content: space-evenly;
@@ -27,13 +25,11 @@ justify-content: center;
 .content-main .description-main {
   margin: 20px;
   width: 70%;
-
 }
 .content-main .description-main p.name {
   font-size: 30px;
   width: 100%;
   text-align: end;
-
 }
 .content-main .description-main p.title {
   font-size: 20px;
@@ -53,11 +49,11 @@ justify-content: center;
   white-space: normal;
   text-align: end;
 }
-.download-btn{
-padding: 10px 20px;
-border-radius: 20px;
+.download-btn {
+  padding: 10px 20px;
+  border-radius: 20px;
   background-color: black;
-margin: 0 auto;
+  margin: 0 auto;
 }
 
 .skill-container {
@@ -68,22 +64,22 @@ margin: 0 auto;
   width: 40px !important;
   margin: 5px !important;
 }
-.skeleton-main-one{
-width:200px !important;
-height:20px !important;
-margin: 10px;
-}
-.skeleton-main-two{
-  width:500px !important;
-  height:20px !important;
+.skeleton-main-one {
+  width: 200px !important;
+  height: 20px !important;
   margin: 10px;
-  }
+}
+.skeleton-main-two {
+  width: 500px !important;
+  height: 20px !important;
+  margin: 10px;
+}
 @media (max-width: 480px) {
   .main-container {
     display: flex;
     height: 80vh;
     flex-direction: column;
-    
+
     padding-top: 20px;
   }
   .image-main {
@@ -101,7 +97,7 @@ margin: 10px;
     align-items: center;
   }
   .content-main .description-main {
-    margin:5px;
+    margin: 5px;
     width: 50%;
   }
   .content-main .description-main p.name {
@@ -111,27 +107,24 @@ margin: 10px;
   }
   .content-main .description-main p.title {
     font-size: 14px;
-  
-
   }
   .content-main .description-main p.my-desc {
     font-size: 10px;
-    
   }
   .skill-container img {
     width: 20px;
     margin: 5px;
   }
-  .skeleton-main-one{
-    width:100px !important;
-    height:20px !important;
+  .skeleton-main-one {
+    width: 100px !important;
+    height: 20px !important;
     margin: 10px;
-    }
-    .skeleton-main-two{
-      width:300px !important;
-      height:20px !important;
-      margin: 10px;
-      }
+  }
+  .skeleton-main-two {
+    width: 300px !important;
+    height: 20px !important;
+    margin: 10px;
+  }
 }
 
 @media (min-width: 481px) and (max-width: 767px) {
@@ -139,7 +132,7 @@ margin: 10px;
     display: flex;
     height: 80vh;
     flex-direction: column;
-    
+
     padding-top: 20px;
   }
   .image-main {
@@ -157,7 +150,7 @@ margin: 10px;
     align-items: center;
   }
   .content-main .description-main {
-    margin:5px;
+    margin: 5px;
     width: 50%;
   }
   .content-main .description-main p.name {
@@ -167,92 +160,32 @@ margin: 10px;
   }
   .content-main .description-main p.title {
     font-size: 3vw;
-  
-
   }
   .content-main .description-main p.my-desc {
     font-size: 2vw;
-    
   }
   .skill-container img {
     width: 20px;
     margin: 5px;
   }
-  .skeleton-main-one{
-    width:100px !important;
-    height:20px !important;
+  .skeleton-main-one {
+    width: 100px !important;
+    height: 20px !important;
     margin: 10px;
-    }
-    .skeleton-main-two{
-      width:300px !important;
-      height:20px !important;
-      margin: 10px;
-      }
+  }
+  .skeleton-main-two {
+    width: 300px !important;
+    height: 20px !important;
+    margin: 10px;
+  }
 }
-   /* Media Query for Tablets Ipads portrait mode */
-   @media (min-width: 768px) and (max-width: 1024px){
-    .main-container {
-      display: flex;
-      height: 80vh;
-      flex-direction: column;
-      
-      padding-top: 20px;
-    }
-    .image-main {
-      height: 30%;
-      justify-content: center;
-  
-      width: 100%;
-      margin: 0 auto;
-    }
-    .content-main {
-      width: 100%;
-      height: 70%;
-      justify-content: space-evenly;
-  
-      align-items: center;
-    }
-    .content-main .description-main {
-      margin:5px;
-      width: 50%;
-    }
-    .content-main .description-main p.name {
-      font-size: 30px;
-  
-      width: 100%;
-    }
-    .content-main .description-main p.title {
-      font-size: 20px;
-    
-  
-    }
-    .content-main .description-main p.my-desc {
-      font-size: 14px;
-      
-    }
-    .skill-container img {
-      width: 20px;
-      margin: 5px;
-    }
-    .skeleton-main-one{
-      width:100px !important;
-      height:20px !important;
-      margin: 10px;
-      }
-      .skeleton-main-two{
-        width:300px !important;
-        height:20px !important;
-        margin: 10px;
-        }
-}
-  
-/* Media Query for Laptops and Desktops */
-@media (min-width: 1025px) and (max-width: 1300px){
+/* Media Query for Tablets Ipads portrait mode */
+@media (min-width: 768px) and (max-width: 1024px) {
   .main-container {
     display: flex;
     height: 80vh;
     flex-direction: column;
-    
+
     padding-top: 20px;
   }
   .image-main {
@@ -270,7 +203,7 @@ margin: 10px;
     align-items: center;
   }
   .content-main .description-main {
-    margin:5px;
+    margin: 5px;
     width: 50%;
   }
   .content-main .description-main p.name {
@@ -280,58 +213,105 @@ margin: 10px;
   }
   .content-main .description-main p.title {
     font-size: 20px;
-  
-
   }
   .content-main .description-main p.my-desc {
     font-size: 14px;
-    
   }
   .skill-container img {
     width: 20px;
     margin: 5px;
   }
-  .skeleton-main-one{
-    width:100px !important;
-    height:20px !important;
+  .skeleton-main-one {
+    width: 100px !important;
+    height: 20px !important;
     margin: 10px;
-    }
-    .skeleton-main-two{
-      width:300px !important;
-      height:20px !important;
-      margin: 10px;
-      }
+  }
+  .skeleton-main-two {
+    width: 300px !important;
+    height: 20px !important;
+    margin: 10px;
+  }
 }
 
-   /* Media Query for Large screens */
-   @media (min-width: 1281px) {
-    .content-main .description-main p.name {
-      font-size: 30px;
-  
-      width: 100%;
-    }
-    .content-main .description-main p.title {
-      font-size: 20px;
-    
-  
-    }
-    .content-main .description-main p.my-desc {
-      font-size: 14px;
-      
-    }
-    .skill-container img {
-      width: 40px;
-      margin: 5px;
-    }
-     .skeleton-main-one{
-    width:100px !important;
-    height:20px !important;
+/* Media Query for Laptops and Desktops */
+@media (min-width: 1025px) and (max-width: 1300px) {
+  .main-container {
+    display: flex;
+    height: 80vh;
+    flex-direction: column;
+
+    padding-top: 20px;
+  }
+  .image-main {
+    height: 30%;
+    justify-content: center;
+
+    width: 100%;
+    margin: 0 auto;
+  }
+  .content-main {
+    width: 100%;
+    height: 70%;
+    justify-content: space-evenly;
+
+    align-items: center;
+  }
+  .content-main .description-main {
+    margin: 5px;
+    width: 50%;
+  }
+  .content-main .description-main p.name {
+    font-size: 30px;
+
+    width: 100%;
+  }
+  .content-main .description-main p.title {
+    font-size: 20px;
+  }
+  .content-main .description-main p.my-desc {
+    font-size: 14px;
+  }
+  .skill-container img {
+    width: 20px;
+    margin: 5px;
+  }
+  .skeleton-main-one {
+    width: 100px !important;
+    height: 20px !important;
     margin: 10px;
-    }
-    .skeleton-main-two{
-      width:300px !important;
-      height:20px !important;
-      margin: 10px;
-      }
+  }
+  .skeleton-main-two {
+    width: 300px !important;
+    height: 20px !important;
+    margin: 10px;
+  }
 }
-  
+
+/* Media Query for Large screens */
+@media (min-width: 1281px) {
+  .content-main .description-main p.name {
+    font-size: 30px;
+
+    width: 100%;
+  }
+  .content-main .description-main p.title {
+    font-size: 20px;
+  }
+  .content-main .description-main p.my-desc {
+    font-size: 14px;
+  }
+  .skill-container img {
+    width: 40px;
+    margin: 5px;
+  }
+  .skeleton-main-one {
+    width: 100px !important;
+    height: 20px !important;
+    margin: 10px;
+  }
+  .skeleton-main-two {
+    width: 300px !important;
+    height: 20px !important;
+    margin: 10px;
+  }
+}
